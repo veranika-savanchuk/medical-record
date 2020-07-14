@@ -2,12 +2,11 @@
   "name": "medical-record",
   "version": "1.0.0",
   "description": "",
-  "main": "out/index.html",
+  "main": "server/index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "node server/index.js",
     "build": "next build",
-    "start": "next start",
-    "export": "yarn build && next export"
+    "start": "cross-env NODE_ENV=production node server/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,7 @@
   },
   "homepage": "https://github.com/veranika-savanchuk/medical-record#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "next": "^9.4.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
