@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node server/index.js",
     "build": "next build",
-    "start": "next start -p $PORT",
+    "start": "node -p $PORT server/index.js",
     "heroku-postbuild": "npm run build"
   },
   "repository": {
