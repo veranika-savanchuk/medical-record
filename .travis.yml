@@ -1,18 +1,15 @@
 language: node_js
-
 node_js:
-  - 12.16.1
-  -
+- 12.16.1
+- 
 sudo: true
-
 branches:
   only:
-    - master
-
+  - master
 deploy:
-  # deploy app as front end website
+  matrix:
   - provider: heroku
     skip_cleanup: true
-    api-key:
-      secure: $HEROKU_API_KEY
+    api_key:
+      secure: lNpWwPiYE5BqhdXc3mhvV/q0X+VPpj2GZAevVqoB9oodgkMeh4WUMz5CaZXrfpqtC3Xpu9s+uIByqQFITOHSnkJIbkfa/Yn1oMPllTQxSIps3Qvi6KKxZSRXYczLK2rV15OksqB5ZRKH0hL8F9u5hKhcckCp5Eh7JHKBSD3tu16br7g0ICR7TZOggwKlR4MTGTnqe995Czxw1fQV40/cHDXrG86w5dsm3+T9P+GyKtH3L13zU0oRhQbqEuRfCCvUENDAYMskp5yn1CFEUsHXYLKntrZqgojxJXagzVndKTJHr8a8U7cYm3r4Dtya9hd2wfVXV5aA2uVaCafSkGC1qk5TErPc2m5f8oDx17ZnFEmkKxhMlEldcGmKc3pIY0r9utBl1VghIPdgOO82eibkGHrNzK+4fKJ6cGYymgshUnzy0H3j2jtkAr+hLO6IJhQhcZjlCUfivZqf+qiVYse1pWsQQRZCqv7pCCrvHPnuazXQEVgqi9y+aFX8k/Lxm0fjWH756e7JZ00MdBR0CqbM6mEOFMSKj/4E5BNaFR4N3yEcjhirDX3iBX/fiwVM3D+0YDvcrB05LCko5a6xe4nH9lihnWykmn8FeRwbzq86xH7aRqsQWtEEps20svSfM8vPjxRvFj8Q1hRWZbZX6Z/ad2RGBCl4zCSi41vYCCObjlk=
     app: veronika-medical-record
