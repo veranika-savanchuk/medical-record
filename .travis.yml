@@ -9,9 +9,16 @@ branches:
   only:
     - master
 
+install:
+  - yarn
+
+script:
+  - yarn export
+
 deploy:
   - provider: heroku
     skip_cleanup: true
+    local_dir: out
     api_key:
       secure: f6Q/jjSu6djImW66TtxR18bUA7C4HPCdy1e5xcnDT/rZOqt8UtyUpmqg7Vg+yl5m++65wTZuXpcvhqBGTuE8LGvcCJx0i4gI4ljbYMduB4zL3g6KxEJq6BbNefCv7i4Zmxz1c9kHzmuK1ZpiqwcUsGMlAai/89TzB9PU0wKlMeVmMF7aVX/86iIMVb5/bQViK7nR6kDRtwQXuVOFlDbWTOuAUhdD+JUXqNCO8FNlnLRF5LIqufEqU8mN0+Sl6360GhztNXf46eCCh0FLFqTExTx4QwUuOifDmsXnSKdwLwuVmvkVVxq66NuYUhyl8d0DZW/X47QZ45SJY/dx0srKfnwVUse4deVw+JiAanIzVsADiRTeJTRH2cDUcD+oAcD89h5u8i7pFvO1jpiF31Oy/bB0L3LkbiaaoviWX2HdAaEloP/X58dsH9NdczaOXSoI+ht35/27WI1xgmWgTkCQQjtWkLleurXhl0cc7SNeO6GDvaVrwIf5meKSPUmsIbwSrV8oYcBdcKHEBblf8G2sO3nY0LbfItOl+Wc82NLycMcVCDFgvPWuMd2X1EoF585n4/Ua9yFfpvFRApyRrmfaDMOANOWBS/g0fpKCJLDDZtEl3ZmlbQVX5aS/NXrGbvn6oYAGFf7fRNqgfOSDKcmOaJqPBc8QOF48+XCTnaxEmmc=
     app: veronika-medical-record
