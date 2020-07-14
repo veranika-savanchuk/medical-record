@@ -9,12 +9,6 @@ branches:
   only:
     - master
 
-install:
-  - yarn
-
-script:
-  - yarn export
-
 deploy:
   - provider: heroku
     skip_cleanup: true
